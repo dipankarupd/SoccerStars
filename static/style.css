@@ -1,0 +1,15 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+}
+
+#card {
+    height: 300px;
+    width: 230px;
+    background-color: #fff;
+    border-radius: 12px;
+}
