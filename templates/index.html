@@ -6,10 +6,20 @@
     </head>
 
     <body>
-        <div id="card">
-            <h1>Alisson</h1>
-            <h4> GK </h4>
-            <h5>Liverpool</h5>
+
+        <h1>
+            FPL team for GameWeek 6
+        </h1>
+        <div id="container">
+            {% for player in players %}
+            <div id="card">
+                <h1>{{player.Name}}</h1>
+                <h4>{{player.Position}}</h4>
+                <h5>{{player.Team}}</h5>
+            </div>
+            {% endfor %}
         </div>
+            
+        
     </body>
 </html>

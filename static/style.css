@@ -1,15 +1,14 @@
-body {
-    height: 100%;
-    width: 100%;
-    background-color: cadetblue;
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
+#container {
+    background-color: aqua;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
 }
 
 #card {
     height: 300px;
-    width: 230px;
-    background-color: #fff;
+    width: 200px;
     border-radius: 12px;
+    background: #fff;
+    margin: 15px;
+    text-align: center;
 }
