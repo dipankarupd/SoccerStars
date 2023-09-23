@@ -37,3 +37,24 @@ def register(req):
             return redirect('register')
     else:
         return render(req, 'register.html')
+
+    
+def login(req):
+
+    if req.method == 'POST':
+
+        username = req.POST['Username']
+        password = req.POST['Password']
+
+        user = auth.authenticate(username=username, password=password)
+
+        if user is not None:
+            auth.login(req,user)
+            return redirect('/')
+        else:
+            messages.info(req, 'Invalid credentials')
+            return redirect('login')
+    else:
+        return render(req, 'login.html')
+            
+    

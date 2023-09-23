@@ -9,12 +9,15 @@
     <body>
         <div id="card">
 
-            {% for message in messages %}
-            <h4>{{message}}</h4>
+            
 
             <form method="POST" action="register">
 
                 {%csrf_token%}
+
+                {% for message in messages %}
+                <h4>{{message}}</h4>
+                {%endfor%}
 
                 <h1>Sign Up</h1>
 
@@ -24,9 +27,9 @@
                 <input type="text" name="Email" id="tbox">
                 <h3>Enter the Password</h3>
                 <input type="password" name="Password" id="tbox"><br>
-
                 <h3>Re - Enter the Password</h3>
                 <input type="password" name="Password2" id="tbox"><br>
+
                 <input type="submit" id="submit">
             </form>
         </div>

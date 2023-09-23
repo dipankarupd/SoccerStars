@@ -7,8 +7,18 @@
 
     <body style="background-color: blueviolet;">
 
-        <h1 style="text-align: center;">
-            FPL team for GameWeek 6
+    
+            {% if user.is_authenticated%}
+            <h1 style="text-align: center;">
+                {{user.username}}, FPL team for GameWeek 6
+            </h1>
+            {% else %}
+            <h1 style="text-align: center;">
+                FPL team for GameWeek 6
+            </h1>
+            {%endif%}
+
+
         </h1>
         <div id="container">
             {% for player in players %}
