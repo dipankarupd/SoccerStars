@@ -1,0 +1,34 @@
+{% load static %}
+
+<html>
+    <head>
+        <title>Register Users</title>
+        <link rel="stylesheet" href="{% static 'regstyle.css' %}">
+    </head>
+
+    <body>
+        <div id="card">
+
+            {% for message in messages %}
+            <h4>{{message}}</h4>
+
+            <form method="POST" action="register">
+
+                {%csrf_token%}
+
+                <h1>Sign Up</h1>
+
+                <h3>Enter the Username</h3>
+                <input type="text" name="Username" id="tbox">
+                <h3>Enter the Email</h3>
+                <input type="text" name="Email" id="tbox">
+                <h3>Enter the Password</h3>
+                <input type="password" name="Password" id="tbox"><br>
+
+                <h3>Re - Enter the Password</h3>
+                <input type="password" name="Password2" id="tbox"><br>
+                <input type="submit" id="submit">
+            </form>
+        </div>
+    </body>
+</html>

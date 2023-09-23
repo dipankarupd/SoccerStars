@@ -1,0 +1,35 @@
+body {
+    height: 100%;
+    width: 100%;
+    background-color: cadetblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h4 {
+    color: red;
+}
+
+#card {
+    height: 500px;
+    width: 360px;
+    background-color: #fff;
+    border-radius: 12px;
+}
+
+#tbox {
+    width: 200px;
+    height: 35px;
+    border-radius: 12px;
+    border: 0.6px solid #000;
+}
+
+#submit {
+    width: 200px;
+    height: 32px;
+    border: none;
+    background-color: cadetblue;
+    border-radius: 16px;
+    margin-top: 12px;
+}
