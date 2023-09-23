@@ -2,13 +2,9 @@ from django.db import models
 
 # Create your models here.
 
-class Footballer:
-    Name: str
-    Position: str
-    Team: str
+class Footballer(models.Model):
+    name = models.CharField(max_length=100, default = '')
+    position = models.CharField(max_length=100, default = '')
+    team =  models.CharField(max_length=100, default = '')
 
-    def __init__(self, Name, Position, Team):
-        self.Name = Name
-        self.Position = Position
-        self.Team = Team
 

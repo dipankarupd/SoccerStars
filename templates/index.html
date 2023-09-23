@@ -5,21 +5,19 @@
         <link rel="stylesheet" href="{% static 'style.css' %}">
     </head>
 
-    <body>
+    <body style="background-color: blueviolet;">
 
-        <h1>
+        <h1 style="text-align: center;">
             FPL team for GameWeek 6
         </h1>
         <div id="container">
             {% for player in players %}
             <div id="card">
-                <h1>{{player.Name}}</h1>
-                <h4>{{player.Position}}</h4>
-                <h5>{{player.Team}}</h5>
+                <h1>{{player.name}}</h1>
+                <h4>{{player.position}}</h4>
+                <h5>{{player.team}}</h5>
             </div>
             {% endfor %}
         </div>
-            
-        
     </body>
 </html>
